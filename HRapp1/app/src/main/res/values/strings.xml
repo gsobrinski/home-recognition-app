@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HR-app-1</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">DashBoard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="hello_home">Welcome to Home Recognition</string>
+</resources>

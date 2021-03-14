@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -37,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
 
         // camera button
         FloatingActionButton fab = findViewById(R.id.fab);
-
         fab.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -48,12 +46,16 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    // on camera success
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == CAMERA_PIC_REQUEST && resultCode == Activity.RESULT_OK) {
             Bitmap image = (Bitmap) data.getExtras().get("data");
-            ImageView imageview = (ImageView) findViewById(R.id.imageView);
-            imageview.setImageBitmap(image);
+
+            // send image to ML activity & start it
+            Intent intent = new Intent(MainActivity.this, MlActivity.class);
+            intent.putExtra("BitmapImage", image);
+            startActivity(intent);
         }
     }
 

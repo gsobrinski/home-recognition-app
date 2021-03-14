@@ -1,0 +1,148 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="edu.temple.homerecognition"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="27"
+8-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml
+10    <!--
+11         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+12         Google Maps Android API v2, but you must specify either coarse or fine
+13         location permissions for the "MyLocation" functionality.
+14    -->
+15    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+15-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml:9:5-79
+15-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml:9:22-76
+16
+17    <!-- Include required permissions for Google Maps API to run. -->
+18    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+18-->[com.google.android.gms:play-services-maps:17.0.0] /home/grace/.gradle/caches/transforms-2/files-2.1/8dd8e7c17a85a0661f86487a4c192d89/jetified-play-services-maps-17.0.0/AndroidManifest.xml:23:5-79
+18-->[com.google.android.gms:play-services-maps:17.0.0] /home/grace/.gradle/caches/transforms-2/files-2.1/8dd8e7c17a85a0661f86487a4c192d89/jetified-play-services-maps-17.0.0/AndroidManifest.xml:23:22-76
+19    <uses-permission android:name="android.permission.INTERNET" />
+19-->[com.google.android.gms:play-services-maps:17.0.0] /home/grace/.gradle/caches/transforms-2/files-2.1/8dd8e7c17a85a0661f86487a4c192d89/jetified-play-services-maps-17.0.0/AndroidManifest.xml:24:5-67
+19-->[com.google.android.gms:play-services-maps:17.0.0] /home/grace/.gradle/caches/transforms-2/files-2.1/8dd8e7c17a85a0661f86487a4c192d89/jetified-play-services-maps-17.0.0/AndroidManifest.xml:24:22-64
+20
+21    <uses-feature
+21-->[com.google.android.gms:play-services-maps:17.0.0] /home/grace/.gradle/caches/transforms-2/files-2.1/8dd8e7c17a85a0661f86487a4c192d89/jetified-play-services-maps-17.0.0/AndroidManifest.xml:26:5-28:35
+22        android:glEsVersion="0x00020000"
+22-->[com.google.android.gms:play-services-maps:17.0.0] /home/grace/.gradle/caches/transforms-2/files-2.1/8dd8e7c17a85a0661f86487a4c192d89/jetified-play-services-maps-17.0.0/AndroidManifest.xml:27:9-41
+23        android:required="true" />
+23-->[com.google.android.gms:play-services-maps:17.0.0] /home/grace/.gradle/caches/transforms-2/files-2.1/8dd8e7c17a85a0661f86487a4c192d89/jetified-play-services-maps-17.0.0/AndroidManifest.xml:28:9-32
+24
+25    <application
+25-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml:11:5-57:19
+26        android:allowBackup="true"
+26-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml:12:9-35
+27        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+27-->[androidx.core:core:1.3.1] /home/grace/.gradle/caches/transforms-2/files-2.1/8dbd859d1cd89239b42e7382b4fc40d7/core-1.3.1/AndroidManifest.xml:24:18-86
+28        android:debuggable="true"
+29        android:extractNativeLibs="false"
+30        android:icon="@mipmap/ic_launcher"
+30-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml:13:9-43
+31        android:label="@string/app_name"
+31-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml:14:9-41
+32        android:roundIcon="@mipmap/ic_launcher_round"
+32-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml:15:9-54
+33        android:supportsRtl="true"
+33-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml:16:9-35
+34        android:testOnly="true"
+35        android:theme="@style/Theme.HomeRecognition" >
+35-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml:17:9-53
+36        <activity
+36-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml:18:9-20:72
+37            android:name="edu.temple.homerecognition.SettingsActivity"
+37-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml:19:13-45
+38            android:label="@string/title_activity_settings" />
+38-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml:20:13-60
+39        <activity
+39-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml:21:9-24:72
+40            android:name="edu.temple.homerecognition.ProfileActivity"
+40-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml:22:13-44
+41            android:label="@string/title_activity_profile"
+41-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml:23:13-59
+42            android:theme="@style/Theme.HomeRecognition.NoActionBar" />
+42-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml:24:13-69
+43        <!--
+44             The API key for Google Maps-based APIs is defined as a string resource.
+45             (See the file "res/values/google_maps_api.xml").
+46             Note that the API key is linked to the encryption key used to sign the APK.
+47             You need a different API key for each encryption key, including the release key that is used to
+48             sign the APK for publishing.
+49             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+50        -->
+51        <meta-data
+51-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml:33:9-35:55
+52            android:name="com.google.android.geo.API_KEY"
+52-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml:34:13-58
+53            android:value="@string/google_maps_key" />
+53-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml:35:13-52
+54
+55        <activity
+55-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml:37:9-39:59
+56            android:name="edu.temple.homerecognition.MapsActivity"
+56-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml:38:13-41
+57            android:label="@string/title_activity_maps" />
+57-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml:39:13-56
+58        <activity
+58-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml:40:9-42:60
+59            android:name="edu.temple.homerecognition.ui.login.LoginActivity"
+59-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml:41:13-51
+60            android:label="@string/title_activity_login" />
+60-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml:42:13-57
+61        <activity
+61-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml:43:9-46:72
+62            android:name="edu.temple.homerecognition.ScrollingActivity"
+62-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml:44:13-46
+63            android:label="@string/title_activity_scrolling"
+63-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml:45:13-61
+64            android:theme="@style/Theme.HomeRecognition.NoActionBar" />
+64-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml:46:13-69
+65        <activity
+65-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml:47:9-56:20
+66            android:name="edu.temple.homerecognition.MainActivity"
+66-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml:48:13-41
+67            android:label="@string/app_name"
+67-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml:49:13-45
+68            android:theme="@style/Theme.HomeRecognition.NoActionBar" >
+68-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml:50:13-69
+69            <intent-filter>
+69-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml:51:13-55:29
+70                <action android:name="android.intent.action.MAIN" />
+70-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml:52:17-69
+70-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml:52:25-66
+71
+72                <category android:name="android.intent.category.LAUNCHER" />
+72-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml:54:17-77
+72-->/home/grace/AndroidStudioProjects/HomeRecognition/app/src/main/AndroidManifest.xml:54:27-74
+73            </intent-filter>
+74        </activity>
+75        <!-- Needs to be explicitly declared on P+ -->
+76        <uses-library
+76-->[com.google.android.gms:play-services-maps:17.0.0] /home/grace/.gradle/caches/transforms-2/files-2.1/8dd8e7c17a85a0661f86487a4c192d89/jetified-play-services-maps-17.0.0/AndroidManifest.xml:33:9-35:40
+77            android:name="org.apache.http.legacy"
+77-->[com.google.android.gms:play-services-maps:17.0.0] /home/grace/.gradle/caches/transforms-2/files-2.1/8dd8e7c17a85a0661f86487a4c192d89/jetified-play-services-maps-17.0.0/AndroidManifest.xml:34:13-50
+78            android:required="false" />
+78-->[com.google.android.gms:play-services-maps:17.0.0] /home/grace/.gradle/caches/transforms-2/files-2.1/8dd8e7c17a85a0661f86487a4c192d89/jetified-play-services-maps-17.0.0/AndroidManifest.xml:35:13-37
+79
+80        <activity
+80-->[com.google.android.gms:play-services-base:17.0.0] /home/grace/.gradle/caches/transforms-2/files-2.1/bfa69299c70613d916dc093c901431a2/jetified-play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
+81            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+81-->[com.google.android.gms:play-services-base:17.0.0] /home/grace/.gradle/caches/transforms-2/files-2.1/bfa69299c70613d916dc093c901431a2/jetified-play-services-base-17.0.0/AndroidManifest.xml:24:13-79
+82            android:exported="false"
+82-->[com.google.android.gms:play-services-base:17.0.0] /home/grace/.gradle/caches/transforms-2/files-2.1/bfa69299c70613d916dc093c901431a2/jetified-play-services-base-17.0.0/AndroidManifest.xml:25:13-37
+83            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+83-->[com.google.android.gms:play-services-base:17.0.0] /home/grace/.gradle/caches/transforms-2/files-2.1/bfa69299c70613d916dc093c901431a2/jetified-play-services-base-17.0.0/AndroidManifest.xml:26:13-72
+84
+85        <meta-data
+85-->[com.google.android.gms:play-services-basement:17.0.0] /home/grace/.gradle/caches/transforms-2/files-2.1/b5a3f39bf4ddacacabf43b64773b9e83/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+86            android:name="com.google.android.gms.version"
+86-->[com.google.android.gms:play-services-basement:17.0.0] /home/grace/.gradle/caches/transforms-2/files-2.1/b5a3f39bf4ddacacabf43b64773b9e83/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+87            android:value="@integer/google_play_services_version" />
+87-->[com.google.android.gms:play-services-basement:17.0.0] /home/grace/.gradle/caches/transforms-2/files-2.1/b5a3f39bf4ddacacabf43b64773b9e83/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+88    </application>
+89
+90</manifest>

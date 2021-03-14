@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Matrix;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -22,6 +24,7 @@ public class MlActivity extends AppCompatActivity {
 
     private static final int inputSize = 150;
     private static final String modelPath = "model.tflite";
+    boolean cameraUpload;
 
 
     private Executor executor = Executors.newSingleThreadExecutor();
@@ -35,20 +38,44 @@ public class MlActivity extends AppCompatActivity {
         setTitle("Model Results");
 
         Intent intent = getIntent();
-        Bitmap modelImage = (Bitmap) intent.getParcelableExtra("BitmapImage");
-        Bitmap displayImage = (Bitmap) intent.getParcelableExtra("BitmapImage");
+
+        Bitmap modelImage = null;
+        Bitmap displayImage = null;
+
+        // camera upload
+        if(intent.hasExtra("BitmapImage")) {
+            modelImage = (Bitmap) intent.getParcelableExtra("BitmapImage");
+            displayImage = (Bitmap) intent.getParcelableExtra("BitmapImage");
+            cameraUpload = true;
+        // file upload
+        } else if(intent.hasExtra("UriImage")) {
+            Uri imageUri = (Uri) intent.getParcelableExtra("UriImage");
+            try {
+                modelImage = MediaStore.Images.Media.getBitmap(this.getContentResolver(), imageUri);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            try {
+                displayImage = MediaStore.Images.Media.getBitmap(this.getContentResolver(), imageUri);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            cameraUpload = false;
+        }
 
         // create image for model
         modelImage = Bitmap.createScaledBitmap(modelImage, inputSize, inputSize, false);
 
-        // create image for display
-        Matrix matrix = new Matrix();
-        matrix.postRotate(90);
-        Bitmap rotatedBitmap = Bitmap.createBitmap(displayImage, 0, 0, displayImage.getWidth(), displayImage.getHeight(), matrix, true);
+//        if(cameraUpload) {
+//            // create image for display
+//            Matrix matrix = new Matrix();
+//            matrix.postRotate(90);
+//            displayImage = Bitmap.createBitmap(displayImage, 0, 0, displayImage.getWidth(), displayImage.getHeight(), matrix, true);
+//        }
 
         // display the image
         ImageView imageView = (ImageView) findViewById(R.id.houseImage);
-        imageView.setImageBitmap(rotatedBitmap);
+        imageView.setImageBitmap(displayImage);
 
         // initialize model
         try {
@@ -59,13 +86,16 @@ public class MlActivity extends AppCompatActivity {
 
         // get image recognition results
         float[] results = classifier.recognizeImage(modelImage);
-//        for(int i = 0; i < results.length; i++) {
-//            System.out.println(results[i]);
-//        }
+        String[] stringResults = new String[results.length];
+        for(int i = 0; i < results.length; i++) {
+            results[i] *= 100;
+            stringResults[i] = String.format("%.2f", results[i]);
+        }
         // display results
         TextView secondEmpire = (TextView) findViewById(R.id.secondEmpire);
         TextView tudorRevival = (TextView) findViewById(R.id.tudorRevival);
-        secondEmpire.setText("Second Empire: " + Float.toString(results[0]));
-        tudorRevival.setText("Tudor Revival: " + Float.toString(results[1]));
+
+        secondEmpire.setText("Second Empire: " + stringResults[0] + "%");
+        tudorRevival.setText("Tudor Revival: " + stringResults[1] + "%");
     }
 }

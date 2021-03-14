@@ -15,3 +15,11 @@
 local.properties
 HRapp1/.idea/
 HRapp1/.gradle/
+HRapp1/build
+HRapp1/*.iml
+HRapp1/local.properties
+HRapp1/build
+HRapp1/captures
+HRapp1/.DS_Store
+HRapp1/.externalNativeBuild
+HRapp1/.cxx

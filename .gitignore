@@ -13,3 +13,5 @@
 .externalNativeBuild
 .cxx
 local.properties
+HRapp1/.idea/
+HRapp1/.gradle/

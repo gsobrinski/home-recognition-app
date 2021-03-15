@@ -31,7 +31,7 @@ public class HomeUserAccount {
     public static HomeUserAccount retrieveAccountData(@NotNull String username, @NotNull String passwordHash) {
         HomeUserAccount acc = new HomeUserAccount();
         try {
-            String link = "http://localhost/HomeRecognition/loginInfo.php";
+            String link = "http://hrappphpapi-env.eba-edytepbk.us-east-2.elasticbeanstalk.com/";
             String data = URLEncoder.encode("username", "UTF-8") + "=" +
                     URLEncoder.encode(username, "UTF-8");
             data += "&" + URLEncoder.encode("password", "UTF-8") + "=" +

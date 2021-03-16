@@ -9,7 +9,7 @@ and store it in their database. In order for users to utilize this feature, they
 Users have the ability to see the map view and see nearby users’ uploads regardless of whether or not they have created an account. In addition, the app will have
 another tab where users can read up on the different architectural styles the app detects, such as the history and distinct features of the style.
 
-## Version 0.1 
+## Version 1.0
 
 * created basic app 
 * created home page 

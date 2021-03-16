@@ -26,7 +26,7 @@ public class ExampleUnitTest {
     @Test
     public void retrieveAccountMatchesTestUser() {
         HomeUserAccount acc = HomeUserAccount.retrieveAccountData("TestUser", "hashedPassword");
-        assertEquals("1", acc.getKey());
+        assertEquals("10", acc.getKey());
         assertEquals("TestUser", acc.getUsername());
         assertEquals("Cam", acc.getFirstName());
         assertEquals("Gallagher", acc.getLastName());

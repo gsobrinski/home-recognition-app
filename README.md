@@ -1,4 +1,5 @@
-# home-recognition-app
+# Home Recognition
+## Grace Sobrinski, Cam Gallagher, Emily Trinh, Madison Stock, & Rory Giszter
 
 Home Recognition will be a mobile application that allows users to take a photo of a house, upload it to the app, and receive data from the app that will 
 inform them of the architectural style(s) of the house. When a photo is uploaded, the app will send the photo to the app back-end and the machine learning model 

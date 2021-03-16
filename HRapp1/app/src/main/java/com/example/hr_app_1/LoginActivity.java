@@ -1,5 +1,4 @@
 package com.example.hr_app_1;
-import com.example.hr_app_1.R;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,8 +13,6 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.example.hr_app_1.MainActivity;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
     private final AppCompatActivity activity = LoginActivity.this;
@@ -42,7 +39,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         usernameEditText = findViewById(R.id.username);
         passwordEditText = findViewById(R.id.password);
         loginButton = findViewById(R.id.login_button2);
-        registerText = findViewById(R.id.register);
+        registerText = findViewById(R.id.errorMsg);
         loadingProgressBar = findViewById(R.id.loading);
     }
     /**
@@ -72,7 +69,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             case R.id.login_button2:
                 validateLogin();
                 break;
-            case R.id.register:
+            case R.id.errorMsg:
                 //validateLogin();
                 // Navigate to RegisterActivity
                 // Intent intentRegister = new Intent(getApplicationContext(), RegisterActivity.class);

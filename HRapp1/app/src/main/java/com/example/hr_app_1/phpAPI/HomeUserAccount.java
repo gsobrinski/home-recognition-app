@@ -24,13 +24,38 @@ public class HomeUserAccount {
 
     }
 
-    public String registerAccount() {
+    public static String registerAccount(HomeUserAccount account) {
+        try {
+            String link = "http://localhost/HomeRecognition/registration.php";
+            String data = URLEncoder.encode("username", "UTF-8") + "=" +
+                    URLEncoder.encode(account.getUsername(), "UTF-8");
+            data += "&" + URLEncoder.encode("password", "UTF-8") + "=" +
+                    URLEncoder.encode(account.getPasswordHash(), "UTF-8");
+            data += "&" + URLEncoder.encode("firstName", "UTF-8") + "=" +
+                    URLEncoder.encode(account.getFirstName(), "UTF-8");
+            data += "&" + URLEncoder.encode("lastName", "UTF-8") + "=" +
+                    URLEncoder.encode(account.getLastName(), "UTF-8");
+            data += "&" + URLEncoder.encode("email", "UTF-8") + "=" +
+                    URLEncoder.encode(account.getEmail(), "UTF-8");
+            URL url = new URL(link);
+            URLConnection conn = url.openConnection();
+
+            conn.setDoOutput(true);
+            OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
+
+            wr.write(data);
+            wr.flush();
+        } catch (Exception e) {
+            return e.getMessage();
+        }
+
+
         return null;
     }
 
     public static HomeUserAccount retrieveAccountData(@NotNull String username, @NotNull String passwordHash) {
-        HomeUserAccount acc = new HomeUserAccount();
         try {
+            HomeUserAccount acc = new HomeUserAccount();
             String link = "http://hrappphpapi-env.eba-edytepbk.us-east-2.elasticbeanstalk.com/";
             String data = URLEncoder.encode("username", "UTF-8") + "=" +
                     URLEncoder.encode(username, "UTF-8");
@@ -59,11 +84,11 @@ public class HomeUserAccount {
             acc.passwordHash = reader.readLine();
 
             System.out.println(sb.toString());
+            return acc;
         } catch (Exception e) {
             // Error retrieving account for some reason or another
             return null;
         }
-        return acc;
     }
 
     public boolean setUsername(@NotNull String username) {
@@ -148,6 +173,10 @@ public class HomeUserAccount {
 
     public String getEmail() {
         return email;
+    }
+
+    public String getPasswordHash() {
+        return passwordHash;
     }
 
     @Override

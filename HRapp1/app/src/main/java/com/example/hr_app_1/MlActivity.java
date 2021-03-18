@@ -4,19 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.Matrix;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.checkerframework.checker.nullness.qual.NonNull;
-import org.tensorflow.lite.DataType;
-import org.tensorflow.lite.support.tensorbuffer.TensorBuffer;
-
 import java.io.IOException;
-import java.nio.ByteBuffer;
+import java.util.ArrayList;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
@@ -25,6 +21,10 @@ public class MlActivity extends AppCompatActivity {
     private static final int inputSize = 150;
     private static final String modelPath = "model.tflite";
     boolean cameraUpload;
+    GridView gridView;
+    int[] houseImages;
+    ArrayList<String> houseTypes;
+    ArrayList<String> mlResults;
 
 
     private Executor executor = Executors.newSingleThreadExecutor();
@@ -36,6 +36,7 @@ public class MlActivity extends AppCompatActivity {
         setContentView(R.layout.activity_ml);
 
         setTitle("Model Results");
+        createArrays();
 
         Intent intent = getIntent();
 
@@ -91,11 +92,36 @@ public class MlActivity extends AppCompatActivity {
             results[i] *= 100;
             stringResults[i] = String.format("%.2f", results[i]);
         }
-        // display results
-        TextView secondEmpire = (TextView) findViewById(R.id.secondEmpire);
-        TextView tudorRevival = (TextView) findViewById(R.id.tudorRevival);
 
-        secondEmpire.setText("Second Empire: " + stringResults[0] + "%");
-        tudorRevival.setText("Tudor Revival: " + stringResults[1] + "%");
+        // second empire
+        mlResults.add(stringResults[0] + "%");
+        // tudor revival
+        mlResults.add(stringResults[1] + "%");
+        // queen anne
+        mlResults.add("0%");
+        // colonial revival
+        mlResults.add("0%");
+        // craftsman
+        mlResults.add("0%");
+
+        // retrieve gridview from the xml
+        gridView = findViewById(R.id.gridView);
+
+        // create the custom adapter and attach it to the gridView
+        ImageGridAdapter adapter = new ImageGridAdapter(this, houseTypes, mlResults, houseImages);
+        gridView.setAdapter(adapter);
+
+    }
+
+    private void createArrays() {
+        // create house type name/image arrays
+        houseTypes = new ArrayList<>();
+        houseTypes.add("Second Empire");
+        houseTypes.add("Tudor Revival");
+        houseTypes.add("Queen Anne");
+        houseTypes.add("Colonial Revival");
+        houseTypes.add("Craftsman");
+        houseImages = new int[]{R.drawable.secondempire, R.drawable.tudorrevival, R.drawable.queenanne, R.drawable.colonialrevival, R.drawable.craftsman};
+        mlResults = new ArrayList<>();
     }
 }

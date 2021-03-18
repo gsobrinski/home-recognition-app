@@ -49,3 +49,7 @@ Now that you've entered the app, there are two implemented features. The first i
 2. Enter your username and password (anything for now) - note that there is error checking if you do not enter one of the required fields
 3. Click LOGIN and the app will display a welcome message
 
+## Link to PHP Repository
+ - [PHP API](https://github.com/YaBoiCGally/home-recognition-php)
+ - If you need access, email tuh30695@temple.edu to gain access
+

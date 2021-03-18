@@ -5,33 +5,188 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/text_home"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:gravity="center_horizontal"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:fontFamily="@font/montserrat"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_home"
-        android:textSize="20sp"
-        android:letterSpacing=".03"
-        app:layout_constraintBottom_toTopOf="@+id/text_home"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="match_parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.884" />
+        tools:layout_editor_absoluteX="199dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/colonialrevival"
+                android:adjustViewBounds="true"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Colonial Revival"
+                android:textColor="@color/orange"
+                android:textSize="20dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:justificationMode="inter_word"
+                android:textSize="16dp"
+                android:text="The Colonial Revival architectural style seeks to revive elements of American colonial architecture. The beginnings of the Colonial Revival style are often attributed to the Centennial Exhibition of 1876, which reawakened Americans to the architectural traditions of their colonial past. Fairly small numbers of Colonial Revival homes were built c. 1880–1910, a period when Queen Anne-style architecture was dominant in the United States. From 1910–1930, the Colonial Revival movement was ascendant, with about 40% of U.S. homes built during this period in the Colonial Revival style. In the immediate post-war period (c. 1950s–early 1960s), Colonial Revival homes continued to be constructed, but in simplified form. In the present-day, many New Traditional homes draw from Colonial Revival styles."/>
+
+<!--            divider line -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="10dp"
+                android:background="@android:color/darker_gray"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/tudorrevival"
+                android:adjustViewBounds="true"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Tudor Revival"
+                android:textColor="@color/orange"
+                android:textSize="20dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="16dp"
+                android:justificationMode="inter_word"
+                android:text="Tudor Revival architecture (also known as mock Tudor in the UK) first manifested itself in domestic architecture in the United Kingdom in the latter half of the 19th century. Based on revival of aspects that were perceived as Tudor architecture, in reality it usually took the style of English vernacular architecture of the Middle Ages that had survived into the Tudor period. The style later became an influence elsewhere, especially the British colonies. For example, in New Zealand, the architect Francis Petre adapted the style for the local climate. In Singapore, then a British colony, architects such as R. A. J. Bidwell pioneered what became known as the Black and White House. The earliest examples of the style originate with the works of such eminent architects as Norman Shaw and George Devey, in what at the time was thought Neo-Tudor design."/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="10dp"
+                android:background="@android:color/darker_gray"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/queenanne"
+                android:adjustViewBounds="true"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Queen Anne"
+                android:textColor="@color/orange"
+                android:textSize="20dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="16dp"
+                android:justificationMode="inter_word"
+                android:text="Queen Anne style architecture was one of a number of popular Victorian architectural styles that emerged in the United States during the period from roughly 1880 to 1910.[2] Popular there during this time, it followed the Eastlake style and preceded the Richardsonian Romanesque and Shingle styles. The American style covers a wide range of picturesque buildings with free Renaissance (non-Gothic Revival) details, rather than being a specific formulaic style in its own right."/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="10dp"
+                android:background="@android:color/darker_gray"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/secondempire"
+                android:adjustViewBounds="true"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Second Empire"
+                android:textColor="@color/orange"
+                android:textSize="20dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="16dp"
+                android:justificationMode="inter_word"
+                android:text="Second Empire, in the United States and Canada, is an architectural style most popular between 1865 and 1900. Second Empire architecture developed from the redevelopment of Paris under Napoleon III's Second French Empire and looked to French Renaissance precedents. It was characterized by a mansard roof, elaborate ornament, and strong massing and was notably used for public buildings as well as commercial and residential design."/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="10dp"
+                android:background="@android:color/darker_gray"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/neoclassical"
+                android:adjustViewBounds="true"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Neoclassical"
+                android:textColor="@color/orange"
+                android:textSize="20dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="16dp"
+                android:justificationMode="inter_word"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="10dp"
+                android:background="@android:color/darker_gray"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/craftsman"
+                android:adjustViewBounds="true"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Craftsman"
+                android:textColor="@color/orange"
+                android:textSize="20dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:justificationMode="inter_word"
+                android:layout_marginBottom="100dp"
+                android:textSize="16dp"
+                />
+
+
+
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

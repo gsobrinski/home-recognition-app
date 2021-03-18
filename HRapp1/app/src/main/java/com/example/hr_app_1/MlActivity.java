@@ -103,6 +103,8 @@ public class MlActivity extends AppCompatActivity {
         mlResults.add("0%");
         // craftsman
         mlResults.add("0%");
+        //neoclassical
+        mlResults.add("0%");
 
         // retrieve gridview from the xml
         gridView = findViewById(R.id.gridView);
@@ -121,7 +123,8 @@ public class MlActivity extends AppCompatActivity {
         houseTypes.add("Queen Anne");
         houseTypes.add("Colonial Revival");
         houseTypes.add("Craftsman");
-        houseImages = new int[]{R.drawable.secondempire, R.drawable.tudorrevival, R.drawable.queenanne, R.drawable.colonialrevival, R.drawable.craftsman};
+        houseTypes.add("Neoclassical");
+        houseImages = new int[]{R.drawable.secondempire, R.drawable.tudorrevival, R.drawable.queenanne, R.drawable.colonialrevival, R.drawable.craftsman, R.drawable.neoclassical};
         mlResults = new ArrayList<>();
     }
 }

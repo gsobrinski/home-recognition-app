@@ -8,21 +8,22 @@
 
     <ImageView
         android:id="@+id/houseImage"
-        android:layout_width="334dp"
-        android:layout_height="315dp"
+        android:layout_width="358dp"
+        android:layout_height="290dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.366"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.272"
+        app:layout_constraintVertical_bias="0.073"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <GridView
         android:id="@+id/gridView"
-        android:layout_width="342dp"
-        android:layout_height="237dp"
-        android:numColumns="3"
+        android:layout_width="360dp"
+        android:layout_height="339dp"
         android:columnWidth="100dp"
+        android:numColumns="3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

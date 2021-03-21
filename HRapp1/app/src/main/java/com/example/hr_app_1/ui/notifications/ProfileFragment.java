@@ -1,6 +1,11 @@
 package com.example.hr_app_1.ui.notifications;
 
+import android.content.Intent;
+import android.content.Context;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +18,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.hr_app_1.R;
+import com.example.hr_app_1.RegistrationActivity;
 
 public class ProfileFragment extends Fragment {
 
@@ -20,7 +26,7 @@ public class ProfileFragment extends Fragment {
     private EditText usernameEditText;
     private EditText passwordEditText;
     private Button loginButton;
-    private TextView errorMsg;
+    private TextView register;
     private View root;
 
     // form fields
@@ -45,11 +51,13 @@ public class ProfileFragment extends Fragment {
                 password = passwordEditText.getText().toString();
 
                 if(username.length() == 0) {
-                    errorMsg.setText("Please enter your username");
-                } else if (password.length() == 0) {
-                    errorMsg.setText("Please enter your password");
-                } else {
-                    errorMsg.setText("Welcome " + username + "!");
+                    usernameEditText.setHint("Please enter your username");
+                }
+                if (password.length() == 0) {
+                    passwordEditText.setHint("Please enter your password");
+                }
+                if(username.length() != 0 && password.length() != 0){
+                    usernameEditText.setHint("Welcome!");
                 }
 //                System.out.println(username);
 //                System.out.println(password);
@@ -61,15 +69,24 @@ public class ProfileFragment extends Fragment {
             }
         });
 
+        register.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                // Navigate to RegisterActivity
+                Intent intentRegister = new Intent(getActivity(), RegistrationActivity.class);
+                startActivity(intentRegister);
+            }
+        });
+
         return root;
     }
 
 //    init views
     private void initViews() {
-        usernameEditText = (EditText) root.findViewById(R.id.username);
+        usernameEditText = (EditText) root.findViewById(R.id.email);
         passwordEditText = (EditText) root.findViewById(R.id.password);
         loginButton = (Button) root.findViewById(R.id.login_button2);
-        errorMsg = (TextView) root.findViewById(R.id.errorMsg);
+        register = (TextView) root.findViewById(R.id.register);
     }
 }
 

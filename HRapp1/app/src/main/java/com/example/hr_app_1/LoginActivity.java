@@ -36,11 +36,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
      * This method is to initialize views
      */
     private void initViews() {
-        usernameEditText = findViewById(R.id.username);
+        usernameEditText = findViewById(R.id.email);
         passwordEditText = findViewById(R.id.password);
         loginButton = findViewById(R.id.login_button2);
-        registerText = findViewById(R.id.errorMsg);
-        loadingProgressBar = findViewById(R.id.loading);
+        registerText = findViewById(R.id.register);
     }
     /**
      * This method is to initialize listeners
@@ -69,7 +68,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             case R.id.login_button2:
                 validateLogin();
                 break;
-            case R.id.errorMsg:
+            case R.id.register:
                 //validateLogin();
                 // Navigate to RegisterActivity
                 // Intent intentRegister = new Intent(getApplicationContext(), RegisterActivity.class);

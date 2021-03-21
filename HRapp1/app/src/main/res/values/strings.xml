@@ -14,8 +14,14 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
+    <string name="prompt_first_name">First Name</string>
+    <string name="prompt_last_name">Last Name</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
+    <string name="prompt_password_confirmation">Confirm Password</string>
     <string name="action_sign_in_short">Login</string>
+    <string name="action_register">Register</string>
+    <string name="action_revert_to_login">Already a member? Login</string>
+    <string name="action_revert_to_register">Don\'t have an account? Register</string>
     <string name="errorMsg">Welcome!</string>
 </resources>
